@@ -32,7 +32,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT97HXM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div class="preloader"><div class="pulse"></div></div>
 <header class="header-wrap wow fadeInUp">
   <div class="container">
     <div class="row">
@@ -637,7 +636,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="overlay"></div>
 
-<!-- Скрипты -->
+<!-- Javascript -->
 <script src="assets/libs/jquery/jquery.min.js"></script>
 <script src="assets/libs/wow/wow.min.js"></script>
 <script src="assets/libs/fancybox/jquery.fancybox.min.js"></script>
@@ -646,34 +645,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="assets/libs/imagesloaded/imagesloaded.min.js"></script>
 <script src="assets/js/common.js"></script>
 <script>
-// var message = "Правый клик запрещен!";
-function clickIE4() {
-  if(event.button == 2) {
-    // alert(message);
-    return false;
-  }
-}
-function clickNS4(e) {
-  if(document.layers || document.getElementById && !document.all) {
-    if(e.which==2 || e.which==3) {
-      // alert(message);
-      return false;
-    }
-  }
-}
-if(document.layers) {
+// Правый клик запрещен
+function clickIE4(){if(event.button==2){return false;}}
+function clickNS4(e){if(e.which==2||e.which==3){return false;}}
+if(document.layers||document.getElementById&&!document.all){
   document.captureEvents(Event.MOUSEDOWN);
   document.onmousedown = clickNS4;
-} else if(document.all && !document.getElementById) {
+} else if(!document.getElementById&&document.all){
   document.onmousedown = clickIE4;
 }
-document.oncontextmenu = new Function("alert(message);return false")
-</script>
-<script>
-// Прелоадер
-$(window).on('load', function() {
-	$('.preloader').delay(100).fadeOut('slow');
-});
+document.oncontextmenu = new Function("return false");
 </script>
 <script type="text/javascript">
 (function(d, w, s) {
