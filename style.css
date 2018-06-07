@@ -252,6 +252,7 @@ a, a:hover, a:focus {
 }
 
 /* COMPARE */
+.form-block-wrap,
 .comparison-wrap {
 	background: #f7f7f7;
 }
