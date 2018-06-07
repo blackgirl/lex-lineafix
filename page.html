@@ -5,8 +5,7 @@
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MT97HXM');</script>
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MT97HXM');</script>
 <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -279,36 +278,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="assets/libs/masonry/masonry.pkgd.min.js"></script>
   <script src="assets/libs/imagesloaded/imagesloaded.min.js"></script>
   <script src="assets/js/common.js"></script>
-  <script>
-// var message = "Правый клик запрещен!";
-function clickIE4() {
-  if(event.button == 2) {
-    // alert(message);
-    return false;
-  }
-}
-function clickNS4(e) {
-  if(document.layers || document.getElementById && !document.all) {
-    if(e.which==2 || e.which==3) {
-      // alert(message);
-      return false;
-    }
-  }
-}
-if(document.layers) {
+<script>
+// Правый клик запрещен
+function clickIE4(){if(event.button==2){return false;}}
+function clickNS4(e){if(e.which==2||e.which==3){return false;}}
+if(document.layers||document.getElementById&&!document.all){
   document.captureEvents(Event.MOUSEDOWN);
   document.onmousedown = clickNS4;
-} else if(document.all && !document.getElementById) {
+} else if(!document.getElementById&&document.all){
   document.onmousedown = clickIE4;
 }
-document.oncontextmenu = new Function("alert(message);return false")
+document.oncontextmenu = new Function("return false");
 </script>
-<script>
-  // Прелоадер
-	$(window).on('load', function(){
-		$('.preloader').delay(1000).fadeOut('slow');
-	});
-  </script>
   <script type="text/javascript">
   (function(d, w, s) {
 	var widgetHash = 'u1am91qrlncaedfpzwf9', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true;
