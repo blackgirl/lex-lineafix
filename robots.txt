@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Disallow: http://lineafix.store/thank.html
