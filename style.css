@@ -441,14 +441,18 @@ a, a:hover, a:focus {
 .video {
 	position: relative;
 }
+.video-bg {
+    max-height: 700px;
+}
 .video-link {
 	position: absolute; 
-	top: 435px; 
-	left: 271px; 
+	top: 352px;
+    left: 217px; 
 }
 .video-link img {
-	width: 297px; 
-	height: 187px; 
+	width: 290px;
+    height: 198px;
+    border-radius: 8px; 
 }
 .video .item {
 	text-align: center;
