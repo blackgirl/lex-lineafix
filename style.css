@@ -490,7 +490,8 @@ a, a:hover, a:focus {
 /* GALLERY */
 .gallery {
 	position: relative;
-	margin-top: -60px;
+	/*margin-top: -60px;*/
+	margin-left: 60px;
 }
 .grid, .grid * {
 	outline: none !important;
@@ -500,7 +501,9 @@ a, a:hover, a:focus {
 	margin-bottom: 30px; 
 }
 .grid-item--width127 {
-	width: 635px;
+	/*width: 635px;*/
+    width: 535px;
+    /*padding: 50px; */
 }
 .grid-item--width89 {
 	width: 445px;
