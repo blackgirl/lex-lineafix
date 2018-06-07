@@ -447,12 +447,12 @@ footer,
 }
 .video-link {
 	position: absolute; 
-	top: 352px;
-    left: 217px; 
+	top: 359px;
+    left: 222px; 
 }
 .video-link img {
-	width: 290px;
-    height: 198px;
+	width: 280px;
+    height: 185px;
     border-radius: 8px; 
 }
 .video .item {
